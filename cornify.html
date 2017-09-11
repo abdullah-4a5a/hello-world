@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Key Detection</title>
+<script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+
+var keys = [];
+window.addEventListener("keydown", myFunction);
+
+function myFunction() {
+var x = event.keyCode;
+var y = String.fromCharCode(x);
+keys.push(y);
+console.log(keys);
+
+var string = keys.toString();
+
+var replace = string.replace(/,/g,'');
+
+console.log(replace);
+
+g = replace.includes("CORNIFY");
+if (g == true){
+cornify_add();
+}
+
+}
+</script>
+</body>
+</html>
