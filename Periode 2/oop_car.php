@@ -28,7 +28,7 @@ class Car
 
   public function duurzaamCheck(){
     if($this->fuel == 'Electricity'){
-      return 'duurzaam';
+      return true;
       }
       else{
         return false;
